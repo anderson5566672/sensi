@@ -4,159 +4,190 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SENSIBILIDADE VIP GRÁTIS</title>
-<meta name="description" content="Siga @andezin.sensi e libere a SENSIBILIDADE VIP GRÁTIS para Free Fire. Site rápido, simples e 100% responsivo." />
-<meta name="color-scheme" content="light dark" />
-<meta property="og:title" content="SENSIBILIDADE VIP GRÁTIS">
-<meta property="og:description" content="Siga @andezin.sensi para liberar a sensibilidade exclusiva de Free Fire.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://i.ibb.co/23d431yF/201-E6367-A5-D5-4-D54-B76-E-8-E120969-FB78.jpg">
-<meta name="theme-color" content="#7c3aed">
-
 <style>
-  :root{
-    --bg-1:#0b0b12;
-    --bg-2:#141428;
-    --brand:#7c3aed;
-    --brand-2:#22d3ee;
-    --ok:#22c55e;
-    --text:#e7e7ff;
-    --muted:#b7b7cc;
-    --card:rgba(255,255,255,.06);
-    --glass:rgba(255,255,255,.08);
-    --shadow: 0 10px 30px rgba(0,0,0,.35);
-  }
-
-  *{box-sizing:border-box}
-  html,body{height:100%}
   body{
     margin:0;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans";
-    color:var(--text);
-    background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.25), transparent 60%),
-      radial-gradient(1000px 500px at 110% 10%, rgba(34,211,238,.18), transparent 50%),
-      linear-gradient(180deg, var(--bg-1), var(--bg-2));
-    min-height:100%;
+    font-family:sans-serif;
+    background:#0b0b12;
+    color:#fff;
+    text-align:center;
+    padding: 20px;               /* espaçamento lateral */
   }
-
-  .container{max-width:980px;margin:0 auto;padding:32px 16px 64px;display:grid;gap:24px;}
-  header{text-align:center;padding:12px 0 6px;}
-  .title{font-size:clamp(28px,5vw,48px);line-height:1.05;margin:0;text-shadow:0 2px 20px rgba(124,58,237,.5);}
-  .subtitle{margin:10px auto 0;max-width:680px;color:var(--muted);font-size:clamp(14px,2.4vw,18px);}
-  .grid{display:grid;gap:24px;grid-template-columns:1fr;}
-  @media (min-width:900px){.grid{grid-template-columns:1.1fr .9fr;}}
-  .card{background:var(--glass);border:1px solid rgba(255,255,255,.06);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;backdrop-filter:blur(6px);}
-  .card-body{padding:20px;}
-  .cta{display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center;padding:22px;}
-  .cta h2{margin:0;font-size:clamp(18px,3.4vw,24px);}
-  .cta p{margin:0;color:var(--muted);}
-  .btn{padding:14px 22px;font-weight:700;font-size:18px;border-radius:12px;border:0;cursor:pointer;color:white;background:linear-gradient(90deg,var(--brand),var(--brand-2));box-shadow:0 10px 24px rgba(124,58,237,.35);transition:transform .12s ease;}
-  .btn:hover{transform:translateY(-2px);}
-  .btn[disabled]{opacity:.6;cursor:not-allowed;}
-  .note{font-size:14px;color:var(--muted);}
-  .demo{text-align:center;background:rgba(255,255,255,.03);padding:16px;}
-  .demo img{width:100%;max-width:440px;border-radius:12px;}
-  .sensi-wrap{position:relative;}
-  .sensi-img{width:100%;border-radius:16px;filter:blur(18px) saturate(0.8);transform:scale(1.02);transition:filter .6s ease;}
-  .sensi-wrap.unlocked .sensi-img{filter:blur(0);transform:scale(1);}
-  .lock-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;background:rgba(10,10,20,.65);border-radius:16px;transition:.4s;}
-  .sensi-wrap.unlocked .lock-overlay{opacity:0;visibility:hidden;}
-  .lock-icon{width:58px;height:58px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,rgba(124,58,237,.8),rgba(34,211,238,.8));color:#fff;font-weight:800;}
-  .progress{width:100%;max-width:520px;height:12px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.07);}
-  .progress>span{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--brand),var(--brand-2));transition:width .1s linear;}
-  footer{text-align:center;font-size:12px;color:var(--muted);padding:16px 0;}
+  .container{
+    max-width: 900px;            /* largura máxima */
+    margin: 0 auto;              /* centraliza */
+  }
+  .btn{
+    background:#7c3aed;
+    color:#fff;
+    padding:14px 24px;
+    font-size:18px;
+    border:0;
+    border-radius:10px;
+    cursor:pointer
+  }
+  .btn:disabled{opacity:.6;cursor:not-allowed}
+  .sensi-img{
+    max-width:500px;
+    width:100%;
+    margin:20px auto;
+    display:block;
+    filter:blur(15px);
+    transition:.5s
+  }
+  .unlocked{filter:blur(0)}
+  .progress{
+    width:80%;
+    max-width:400px;
+    height:12px;
+    background:#333;
+    margin:15px auto;
+    border-radius:999px;
+    overflow:hidden
+  }
+  .progress span{
+    display:block;
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#7c3aed,#22d3ee);
+    transition:width .2s
+  }
+  /* bloco do GIF de demonstração */
+  .demo{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:18px;
+    padding-top:16px;
+  }
+  .demo p{
+    margin:0 0 10px;
+    color:#b7b7cc;
+    font-size:14px;
+  }
+  .demo img{
+    width:100%;
+    max-width:440px;
+    border-radius:12px;
+    display:block;
+    margin:0 auto;
+  }
+  canvas{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999
+  }
 </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1 class="title">SENSIBILIDADE VIP GRÁTIS</h1>
-      <p class="subtitle">Siga <strong>@andezin.sensi</strong> no Instagram para liberar a sensibilidade exclusiva do Free Fire.</p>
-    </header>
+    <h1>SENSIBILIDADE VIP GRÁTIS</h1>
+    <p>Siga <b>@andezin.sensi</b> no Instagram para liberar a sensibilidade.</p>
+    
+    <button id="btnFollow" class="btn">💜 Seguir @andezin.sensi</button>
+    <p id="status"></p>
+    <div class="progress"><span id="bar"></span></div>
 
-    <section class="grid">
-      <div class="card">
-        <div class="card-body">
-          <div class="cta">
-            <h2>👉 Me siga para liberar a sensibilidade</h2>
-            <p>O Instagram abrirá em outra guia. Ao voltar, espere <strong>5 segundos</strong> para liberar.</p>
-            <button id="btnFollow" class="btn">💜 Seguir @andezin.sensi</button>
-            <div class="note" id="statusNote"></div>
-          </div>
-          <div class="demo">
-            <p class="note">Veja como é (demonstração):</p>
-            <img src="https://i.ibb.co/207YFLcL/IMG-0233.gif" alt="Demonstração">
-          </div>
-        </div>
-      </div>
+    <!-- GIF de demonstração do "seguir" -->
+    <div class="demo">
+      <p>Veja como seguir no Instagram:</p>
+      <img src="https://i.ibb.co/207YFLcL/IMG-0233.gif" alt="Demonstração de seguir @andezin.sensi no Instagram">
+    </div>
 
-      <div class="card">
-        <div class="card-body">
-          <div class="sensi-wrap" id="sensiWrap">
-            <img id="sensiImg" class="sensi-img" src="https://i.ibb.co/23d431yF/201-E6367-A5-D5-4-D54-B76-E-8-E120969-FB78.jpg" alt="Sensibilidade">
-            <div class="lock-overlay" id="lockOverlay">
-              <div class="lock-icon">🔒</div>
-              <div><strong>Bloqueado</strong><br><span class="note">Siga no Instagram para liberar</span></div>
-              <div class="progress"><span id="bar"></span></div>
-              <div class="note" id="countdownText"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>© <span id="year"></span> Sensi VIP — Todos os direitos reservados.</footer>
+    <img id="sensi" class="sensi-img" src="https://i.ibb.co/23d431yF/201-E6367-A5-D5-4-D54-B76-E-8-E120969-FB78.jpg" alt="Sensibilidade do Free Fire">
   </div>
 
+  <canvas id="confetti"></canvas>
+
 <script>
-(function(){
   const IG_URL = "https://www.instagram.com/andezin.sensi";
-  const btn = document.getElementById('btnFollow');
-  const note = document.getElementById('statusNote');
-  const wrap = document.getElementById('sensiWrap');
-  const overlay = document.getElementById('lockOverlay');
-  const bar = document.getElementById('bar');
-  const cdText = document.getElementById('countdownText');
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById("btnFollow");
+  const status = document.getElementById("status");
+  const bar = document.getElementById("bar");
+  const sensi = document.getElementById("sensi");
+  const confettiCanvas = document.getElementById("confetti");
+  const ctx = confettiCanvas.getContext("2d");
 
-  if(localStorage.getItem('sensiUnlocked') === '1'){ unlockInstant(); }
+  let W,H,particles=[],animation;
+  function resizeCanvas(){W=confettiCanvas.width=window.innerWidth;H=confettiCanvas.height=window.innerHeight;}
+  window.addEventListener("resize",resizeCanvas);resizeCanvas();
 
-  btn.addEventListener('click', () => {
+  function createConfetti(){
+    particles=[];
+    for(let i=0;i<150;i++){
+      particles.push({
+        x:Math.random()*W,
+        y:Math.random()*H-H,
+        r:Math.random()*6+4,
+        d:Math.random()*W,
+        color:"hsl("+Math.random()*360+",100%,50%)",
+        tilt:Math.floor(Math.random()*10)-10
+      });
+    }
+  }
+
+  function drawConfetti(){
+    ctx.clearRect(0,0,W,H);
+    for(let i=0;i<particles.length;i++){
+      let p=particles[i];
+      ctx.beginPath();
+      ctx.lineWidth=p.r/2;
+      ctx.strokeStyle=p.color;
+      ctx.moveTo(p.x+p.tilt+ p.r/4,p.y);
+      ctx.lineTo(p.x+p.tilt,p.y+p.r);
+      ctx.stroke();
+    }
+    update();
+  }
+
+  let angle=0;
+  function update(){
+    angle+=0.01;
+    for(let i=0;i<particles.length;i++){
+      let p=particles[i];
+      p.y+=Math.cos(angle+p.d)+1+p.r/2;
+      p.x+=Math.sin(angle);
+      if(p.y>H){
+        particles[i]={x:Math.random()*W,y:-10,r:p.r,d:p.d,color:p.color,tilt:p.tilt};
+      }
+    }
+  }
+
+  function startConfetti(){
+    createConfetti();
+    animation = setInterval(drawConfetti,20);
+    setTimeout(stopConfetti,5000); // confete acaba em 5s
+  }
+
+  function stopConfetti(){
+    clearInterval(animation);
+    ctx.clearRect(0,0,W,H);
+  }
+
+  btn.addEventListener("click", () => {
+    // abre o Instagram imediatamente para não ser bloqueado como pop-up
+    window.open(IG_URL, "_blank", "noopener");
+
+    // inicia contagem de 5s e só então libera
     btn.disabled = true;
-    note.textContent = "Abrindo Instagram...";
-    window.open(IG_URL,'_blank'); 
-    startUnlockCountdown(5);
+    status.textContent = "Aguardando 5 segundos...";
+    let seconds = 5;
+    let progress = 0;
+    bar.style.width = "0%";
+
+    const timer = setInterval(() => {
+      seconds--;
+      progress += 20;
+      bar.style.width = progress + "%";
+      if (seconds > 0) {
+        status.textContent = "Liberando em " + seconds + "s...";
+      } else {
+        clearInterval(timer);
+        status.textContent = "✅ Sensibilidade liberada!";
+        sensi.classList.add("unlocked");
+        startConfetti(); // confete temporário (5s)
+      }
+    }, 1000);
   });
-
-  function startUnlockCountdown(seconds){
-    const total = seconds*10;
-    let step=0;
-    const timer = setInterval(()=>{
-      step++;
-      bar.style.width = (step/total*100)+"%";
-      const left = Math.ceil((total-step)/10);
-      cdText.textContent = left>0?Liberando em ${left}s...:"Finalizando...";
-      if(step>=total){clearInterval(timer);unlock();}
-    },100);
-  }
-
-  function unlock(){
-    wrap.classList.add('unlocked');
-    overlay.style.opacity='0';
-    overlay.style.visibility='hidden';
-    note.textContent="✅ Sensibilidade liberada!";
-    localStorage.setItem('sensiUnlocked','1');
-  }
-
-  function unlockInstant(){
-    wrap.classList.add('unlocked');
-    overlay.style.opacity='0';
-    overlay.style.visibility='hidden';
-    note.textContent="🔓 Sensibilidade já liberada.";
-    btn.textContent="💜 Visitar @andezin.sensi";
-    btn.addEventListener('click',()=>window.open(IG_URL,'_blank'));
-  }
-})();
 </script>
 </body>
 </html>
