@@ -197,7 +197,7 @@
         <div class="card-body">
           <div class="cta">
             <h2>👉 Me siga para liberar a sensibilidade</h2>
-            <p>Toque no botão abaixo. O Instagram abrirá em outra guia. Voltando para cá, a sensi libera em <strong>3 segundos</strong>.</p>
+            <p>Toque no botão abaixo. O Instagram abrirá em outra guia. Voltando para cá, a sensi libera em <strong>5 segundos</strong>.</p>
 
             <button id="btnFollow" class="btn" aria-label="Seguir @andezin.sensi no Instagram">
               💜 Seguir @andezin.sensi
@@ -258,21 +258,30 @@
     const yearSpan = document.getElementById('year');
     yearSpan.textContent = new Date().getFullYear();
 
-    // Se já liberou antes, mantém desbloqueado
+    // Verifica se já liberou antes
     const already = localStorage.getItem('sensiUnlocked') === '1';
-    if (already) unlockInstant();
+
+    if (already) {
+      unlockInstant();
+    } else {
+      // Estado inicial: bloqueado
+      wrap.classList.remove('unlocked');
+      overlay.style.opacity = '1';
+      overlay.style.visibility = 'visible';
+      note.textContent = "";
+    }
 
     btn.addEventListener('click', () => {
       btn.disabled = true;
       note.textContent = "Abrindo seu Instagram em uma nova guia...";
       // Abre em nova guia
       let newTab = window.open(IG_URL, '_blank', 'noopener');
-      // Mesmo que o navegador bloqueie o popup, seguimos o fluxo
-      startUnlockCountdown(3);
+      // Inicia contagem regressiva de 5 segundos
+      startUnlockCountdown(5);
     });
 
     function startUnlockCountdown(seconds){
-      const total = seconds * 10; // steps de 100ms
+      const total = seconds * 10; // passos de 100ms
       let step = 0;
       cdText.textContent = Liberando em ${seconds}s...;
       bar.style.width = '0%';
@@ -300,6 +309,8 @@
       overlay.setAttribute('aria-hidden','true');
       note.innerHTML = ✅ Sensibilidade liberada!;
       localStorage.setItem('sensiUnlocked','1');
+      cdText.textContent = "";
+      bar.style.width = '100%';
       blastConfetti(120);
       // pequena vibração em dispositivos que suportam
       if (navigator.vibrate) { try { navigator.vibrate(60); } catch(e){} }
@@ -310,7 +321,10 @@
       overlay.style.opacity = '0';
       overlay.style.visibility = 'hidden';
       note.textContent = "🔓 Sensibilidade já liberada.";
+      cdText.textContent = "";
+      bar.style.width = '100%';
       btn.textContent = "💜 Visitar @andezin.sensi";
+      btn.disabled = false;
       btn.addEventListener('click', () => window.open(IG_URL, '_blank','noopener'));
     }
 
